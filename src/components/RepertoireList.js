@@ -22,9 +22,11 @@ function RepertoireList() {
             <NavBar />
             <h1>Repertoire List</h1>
             <NewRepertoireForm onAddRepertoire={handleAddRepertoire} />
-            {repertoire.map((rep, index) => (
-                <RepertoireCard key={index} rep={rep} />
-            ))}
+            {[...repertoire]
+                .sort((a, b) => a.title.localeCompare(b.title))
+                .map((rep) => (
+                    <RepertoireCard key={rep.id} rep={rep} />
+                ))}
         </div>
     );
 }
