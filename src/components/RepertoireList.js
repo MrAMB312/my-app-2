@@ -17,10 +17,10 @@ function RepertoireList() {
         <div>
             <NavBar />
             <h1>Repertoire List</h1>
+            <NewRepertoireForm />
             {repertoire.map((rep, index) => (
                 <RepertoireCard key={index} rep={rep} />
             ))}
-            <NewRepertoireForm />
         </div>
     );
 }
