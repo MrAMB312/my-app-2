@@ -1,4 +1,6 @@
-function RepertoireCard({ title, composer, grade }) {
+function RepertoireCard({ rep }) {
+    const { title, composer, grade } = rep;
+
     return (
         <div>
             <h3>{title}</h3>

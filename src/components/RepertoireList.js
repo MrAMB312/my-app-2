@@ -1,13 +1,24 @@
 import RepertoireCard from "./RepertoireCard";
+import NewRepertoireForm from "./NewRepertoireForm";
+import { useState, useEffect } from "react";
 
-function RepertoireList({ repertoireList }) {
+function RepertoireList() {
+    const [repertoire, setRepertoire] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:3001/repertoire")
+            .then((response) => response.json())
+            .then((data) => setRepertoire(data))
+            .catch((error) => console.error("Error", error))
+    }, []);
 
     return (
         <div>
             <h1>Repertoire List</h1>
-            {repertoireList.map((rep, index) => (
+            {repertoire.map((rep, index) => (
                 <RepertoireCard key={index} rep={rep} />
             ))}
+            <NewRepertoireForm />
         </div>
     );
 }
