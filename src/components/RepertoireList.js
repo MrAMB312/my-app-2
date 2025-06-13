@@ -13,11 +13,15 @@ function RepertoireList() {
             .catch((error) => console.error("Error", error))
     }, []);
 
+    function handleAddRepertoire(newRepertoire) {
+        setRepertoire([...repertoire, newRepertoire])
+    }
+
     return (
         <div>
             <NavBar />
             <h1>Repertoire List</h1>
-            <NewRepertoireForm />
+            <NewRepertoireForm onAddRepertoire={handleAddRepertoire} />
             {repertoire.map((rep, index) => (
                 <RepertoireCard key={index} rep={rep} />
             ))}
