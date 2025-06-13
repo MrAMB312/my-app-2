@@ -1,9 +1,6 @@
-import { useState, useEffect } from "react";
 import NavBar from "./NavBar.js";
 
 function Home() {
-
-
     return (
         <div>
             <NavBar />

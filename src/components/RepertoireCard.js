@@ -1,5 +1,3 @@
-import React from "react";
-
 function RepertoireCard({ title, composer, grade }) {
     return (
         <div>

@@ -2,17 +2,11 @@ import Home from "./components/Home";
 import About from "./components/About";
 import RepertoireList from "./components/RepertoireList";
 import ErrorPage from "./components/ErrorPage";
-import App from "./App";
 
 const routes = [
-    // {
-    //     path: "/",
-    //     component: <Home />,
-    //     errorElement: <ErrorPage />,
-    // },
     {
         path: "/",
-        element: <App />,
+        element: <Home />,
         errorElement: <ErrorPage />,
     },
     {
@@ -21,7 +15,7 @@ const routes = [
         errorElement: <ErrorPage />,
     },
     {
-        path: "/repertoirelist",
+        path: "/repertoire-list",
         element: <RepertoireList />,
         errorElement: <ErrorPage />,
     }

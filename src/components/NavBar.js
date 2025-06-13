@@ -6,7 +6,7 @@ function NavBar() {
             <ul>
                 <li><NavLink to="/">Home</NavLink></li>
                 <li><NavLink to="/about">About</NavLink></li>
-                <li><NavLink to="/repertoirelist">Repertoire List</NavLink></li>
+                <li><NavLink to="/repertoire-list">Repertoire List</NavLink></li>
             </ul>
         </nav>
     );

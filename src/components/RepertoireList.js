@@ -1,4 +1,3 @@
-import React from "react";
 import RepertoireCard from "./RepertoireCard";
 
 function RepertoireList({ repertoireList }) {

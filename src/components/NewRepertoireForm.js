@@ -1,9 +1,6 @@
-import NavBar from "./NavBar";
-
 function NewRepertoireForm() {
     return (
         <div>
-            <NavBar />
             <h2>Add New Repertoire Entry</h2>
             <form>
                 <label>
