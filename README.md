@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# Project Title
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Wilmette Junior High School Band Program Webpage
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+This project is the beginning of a web app that lists information about the program and displays a
+repertoire lists that users can contribute to.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. Clone the repository
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+git clone https://github.com/MrAMB312/my-app-2.git
 
-### `npm run build`
+2. Navigate into the project directory
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+cd my-app-2
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Install dependencies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+npm install
 
-### `npm run eject`
+4. Start the JSON server (mock backend) on port 3001
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+npx json-server --watch db.json --port 3001
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. In a new terminal, start the development server
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+npm start
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Open your browser and navigate to http://localhost:3000 to view the app.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Use the "Add New Repertoire" form in the Repertoire List page to submit new pieces to the repertoire list.
 
-### Code Splitting
+* The repertoire list is fetched from the JSON server and displays all entries sorted by title.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* The form data is sent to the JSON server which stores the information in db.json.
 
-### Analyzing the Bundle Size
+* Refreshing the page will continue to display the updated repertoire list.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Contributions are welcome! To contribute:
 
-### Advanced Configuration
+1. Fork the repository.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+2. Create a new branch for your feature or fix.
 
-### Deployment
+git checkout -b feature/your-feature-name
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+3. Make your changes and commit them with descriptive messages.
 
-### `npm run build` fails to minify
+git commit -m "adding feature x"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4. Push your branch to your fork.
+
+git push origin feature/your-feature-name
+
+5. Open a pull request against the main repository's main branch.
+
