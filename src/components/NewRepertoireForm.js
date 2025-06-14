@@ -42,34 +42,39 @@ function NewRepertoireForm({ onAddRepertoire }) {
     }
     
     return (
-        <div>
-            <h2>Add New Repertoire Entry</h2>
+        <div className="new-repertoire-form">
+            <h2 className="form-title">Add New Repertoire</h2>
             <form onSubmit={handleSubmit}>
-                <label>
-                    Title:
-                    <input
-                        type="text"
-                        name="title"
-                        value={formData.title}
-                        onChange={handleChange} />
-                </label>
-                <label>
-                    Composer:
-                    <input
-                        type="text"
-                        name="composer"
-                        value={formData.composer}
-                        onChange={handleChange} />
-                </label>
-                <label>
-                    Grade:
-                    <input
-                        type="text"
-                        name="grade"
-                        value={formData.grade}
-                        onChange={handleChange} />
-                </label>
-                <input type="submit" value="Submit" />
+                <div className="inputs-container">
+                    <label>
+                        Title:
+                        <input
+                            type="text"
+                            name="title"
+                            value={formData.title}
+                            onChange={handleChange}
+                        />
+                    </label>
+                    <label>
+                        Composer:
+                        <input
+                            type="text"
+                            name="composer"
+                            value={formData.composer}
+                            onChange={handleChange}
+                        />
+                    </label>
+                    <label>
+                        Grade:
+                        <input
+                            type="text"
+                            name="grade"
+                            value={formData.grade}
+                            onChange={handleChange}
+                        />
+                    </label>
+                </div>
+                <button type="submit">Add</button>
             </form>
         </div>
     );
